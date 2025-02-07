@@ -27,7 +27,7 @@ Ensure you have the following installed:
 ### Steps
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/research-ai.git
+   git clone https://github.com/1aryantyagi/RESEARCH_AI_BOT.git
    cd research-ai
    ```
 2. **Install dependencies**
