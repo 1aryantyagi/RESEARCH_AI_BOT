@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results - Research Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="page-title">Research Insights: <span class="highlight">{{ result.topic }}</span></h1>
+
+        <section class="research-section">
+            <div class="section-header paper-header">
+                <div class="header-icon">📖</div>
+                <h2>Academic Literature</h2>
+            </div>
+
+            <article class="summary-card paper-summary">
+                <h3>Key Findings Summary</h3>
+                <p>{{ result.paper_summary }}</p>
+            </article>
+
+            <div class="subsection">
+                <div class="subsection-header">
+                    <h3>Top Relevant Papers</h3>
+                    <div class="decorative-line"></div>
+                </div>
+                {% for paper in result.papers %}
+                <div class="paper-card">
+                    <div class="accent-bar"></div>
+                    <div class="content">
+                        <a href="{{ paper.link }}" target="_blank" class="paper-title">{{ paper.title }}</a>
+                        <div class="paper-meta">
+                            <span class="authors">{{ paper.authors|join(', ') }}</span>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="research-section">
+            <div class="section-header news-header">
+                <div class="header-icon">🌐</div>
+                <h2>Media Coverage</h2>
+            </div>
+
+            <article class="summary-card news-summary">
+                <h3>Trend Analysis</h3>
+                <p>{{ result.news_summary }}</p>
+            </article>
+
+            <div class="subsection">
+                <div class="subsection-header">
+                    <h3>Featured Articles</h3>
+                    <div class="decorative-line"></div>
+                </div>
+                {% for article in result.news %}
+                <div class="news-card">
+                    <div class="content">
+                        <div class="source-tag">{{ article.source }}</div>
+                        <a href="{{ article.link }}" target="_blank" class="article-title">{{ article.title }}</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <a href="/" class="back-button">Explore New Topic</a>
+    </div>
+</body>
+
+</html>

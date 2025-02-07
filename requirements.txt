@@ -1,0 +1,6 @@
+flask
+python-dotenv
+feedparser
+requests
+openai
+datetime

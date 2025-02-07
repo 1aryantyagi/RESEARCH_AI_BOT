@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    color: #2d3436;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    white-space: pre-line;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    animation: fadeIn 0.6s ease-in;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.highlight {
+    color: #3498db;
+    position: relative;
+}
+
+.highlight::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #3498db 0%, #2980b9 100%);
+}
+
+.research-section {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    color: white;
+}
+
+.section-header h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.header-icon {
+    font-size: 2rem;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.summary-card {
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 1.5rem 0;
+    position: relative;
+    overflow: hidden;
+    background: #f8f9fa;
+    border-left: 4px solid #3498db;
+}
+
+.summary-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.subsection-header {
+    margin: 2rem 0 1.5rem;
+    position: relative;
+}
+
+.subsection-header h3 {
+    font-size: 1.5rem;
+    color: #34495e;
+    margin-bottom: 0.5rem;
+}
+
+.decorative-line {
+    height: 2px;
+    width: 80px;
+    background: #3498db;
+    border-radius: 2px;
+}
+
+.paper-card,
+.news-card {
+    margin: 1.2rem 0;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+
+.paper-card:hover,
+.news-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.accent-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #e74c3c;
+}
+
+.paper-title,
+.article-title {
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.paper-title:hover,
+.article-title:hover {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+.paper-meta {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+}
+
+.source-tag {
+    background: #2ecc71;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 0.8rem;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin: 2rem auto 0;
+    border: none;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+    color: white;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 2rem 1rem;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .section-header {
+        padding: 1rem;
+    }
+
+    .summary-card {
+        padding: 1.5rem;
+    }
+}
